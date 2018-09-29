@@ -2,6 +2,11 @@ package com.mygdx.legendofretro.graphics;
 
 import com.mygdx.legendofretro.Handler;
 
+/**
+ *  This class instantiates and manages all the Animation objects necessary throughout the code. More specifically, it instantiates all Animation objects,
+ *  then calls their update() methods making sure the animations are actually playing. These Animation objects are then made available throughout the code
+ *  by getter methods.
+ */
 public class AnimatedSpriteManager {
     private final Handler handler;
     private Animation playerLeft, playerUp, playerRight, playerDown;

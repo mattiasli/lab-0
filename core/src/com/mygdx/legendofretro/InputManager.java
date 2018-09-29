@@ -48,7 +48,7 @@ public class InputManager implements GestureDetector.GestureListener {
 
     @Override
     public boolean zoom(float initialDistance, float distance) {
-        handler.getCameraManager().getOrthographicCamera().zoom = handler.getCameraManager().getCurrentZoom() * (initialDistance / distance);
+        handler.getCameraManager().setZoom(handler.getCameraManager().getReferenceZoom() * (initialDistance / distance));
         return false;
     }
 
@@ -59,6 +59,6 @@ public class InputManager implements GestureDetector.GestureListener {
 
     @Override
     public void pinchStop() {
-        handler.getCameraManager().setCurrentZoom(handler.getCameraManager().getOrthographicCamera().zoom);
+        handler.getCameraManager().setReferenceZoom(handler.getCameraManager().getZoom());
     }
 }

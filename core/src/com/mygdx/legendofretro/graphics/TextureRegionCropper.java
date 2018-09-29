@@ -4,8 +4,13 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.mygdx.legendofretro.Handler;
 import com.mygdx.legendofretro.MyGdxGame;
 
+/**
+ * This class has methods for returning sprites and sprite arrays as TextureRegion and TextureRegion[] from
+ * the Texture held in the TextureLoader object.
+ */
 public class TextureRegionCropper {
-    Handler handler;
+    private final Handler handler;
+
     public TextureRegionCropper(final Handler handler) {
         this.handler = handler;
     }

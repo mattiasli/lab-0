@@ -3,6 +3,10 @@ package com.mygdx.legendofretro.graphics;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.mygdx.legendofretro.Handler;
 
+/**
+ * This class holds still sprites in the form of TextureRegion fields which it initializes in its initialize() method.
+ * The TextureRegion fields are then made available throughout the code by getters.
+ */
 public class StillSpriteManager {
     private final Handler handler;
 
@@ -91,68 +95,70 @@ public class StillSpriteManager {
     }
 
     public void initialize(){
-        playerLeft = handler.getTextureRegionCropper().getSprite(1,0,1,1);
-        playerUp = handler.getTextureRegionCropper().getSprite(3,0,1,1);
-        playerRight = handler.getTextureRegionCropper().getSprite(5,0,1,1);
-        playerDown = handler.getTextureRegionCropper().getSprite(7,0,1,1);
-        dirt = handler.getTextureRegionCropper().getSprite(10,2,1,1);
-        rock = handler.getTextureRegionCropper().getSprite(0,2,1,1);
-        leftEdgeRock = handler.getTextureRegionCropper().getSprite(1,2,1,1);
-        upperLeftCornerRock = handler.getTextureRegionCropper().getSprite(2,2,1,1);
-        upperEdgeRock = handler.getTextureRegionCropper().getSprite(3,2,1,1);
-        upperRightCornerRock = handler.getTextureRegionCropper().getSprite(4,2,1,1);
-        rightEdgeRock = handler.getTextureRegionCropper().getSprite(5,2,1,1);
-        lowerRightCornerRock = handler.getTextureRegionCropper().getSprite(6,2,1,1);
-        lowerEdgeRock = handler.getTextureRegionCropper().getSprite(7,2,1,1);
-        lowerLeftCornerRock = handler.getTextureRegionCropper().getSprite(8,2,1,1);
-        loneRock = handler.getTextureRegionCropper().getSprite(9,2,1,1);
-        redDirt = handler.getTextureRegionCropper().getSprite(10,1,1,1);
-        redRock = handler.getTextureRegionCropper().getSprite(0,1,1,1);
-        leftEdgeRedRock = handler.getTextureRegionCropper().getSprite(1,1,1,1);
-        upperLeftCornerRedRock = handler.getTextureRegionCropper().getSprite(2,1,1,1);
-        upperEdgeRedRock = handler.getTextureRegionCropper().getSprite(3,1,1,1);
-        upperRightCornerRedRock = handler.getTextureRegionCropper().getSprite(4,1,1,1);
-        rightEdgeRedRock = handler.getTextureRegionCropper().getSprite(5,1,1,1);
-        lowerRightCornerRedRock = handler.getTextureRegionCropper().getSprite(6,1,1,1);
-        lowerEdgeRedRock = handler.getTextureRegionCropper().getSprite(7,1,1,1);
-        lowerLeftCornerRedRock = handler.getTextureRegionCropper().getSprite(8,1,1,1);
-        loneRedRock = handler.getTextureRegionCropper().getSprite(9,1,1,1);
+        TextureRegionCropper textureRegionCropper = handler.getTextureRegionCropper();
 
-        ghoulDirt = handler.getTextureRegionCropper().getSprite(10,3,1,1);
-        ghoulRock = handler.getTextureRegionCropper().getSprite(0,3,1,1);
-        leftEdgeGhoulRock = handler.getTextureRegionCropper().getSprite(1,3,1,1);
-        upperLeftCornerGhoulRock = handler.getTextureRegionCropper().getSprite(2,3,1,1);
-        upperEdgeGhoulRock = handler.getTextureRegionCropper().getSprite(3,3,1,1);
-        upperRightCornerGhoulRock = handler.getTextureRegionCropper().getSprite(4,3,1,1);
-        rightEdgeGhoulRock = handler.getTextureRegionCropper().getSprite(5,3,1,1);
-        lowerRightCornerGhoulRock = handler.getTextureRegionCropper().getSprite(6,3,1,1);
-        lowerEdgeGhoulRock = handler.getTextureRegionCropper().getSprite(7,3,1,1);
-        lowerLeftCornerGhoulRock = handler.getTextureRegionCropper().getSprite(8,3,1,1);
-        loneGhoulRock = handler.getTextureRegionCropper().getSprite(9,3,1,1);
+        playerLeft = textureRegionCropper.getSprite(1,0,1,1);
+        playerUp = textureRegionCropper.getSprite(3,0,1,1);
+        playerRight = textureRegionCropper.getSprite(5,0,1,1);
+        playerDown = textureRegionCropper.getSprite(7,0,1,1);
+        dirt = textureRegionCropper.getSprite(10,2,1,1);
+        rock = textureRegionCropper.getSprite(0,2,1,1);
+        leftEdgeRock = textureRegionCropper.getSprite(1,2,1,1);
+        upperLeftCornerRock = textureRegionCropper.getSprite(2,2,1,1);
+        upperEdgeRock = textureRegionCropper.getSprite(3,2,1,1);
+        upperRightCornerRock = textureRegionCropper.getSprite(4,2,1,1);
+        rightEdgeRock = textureRegionCropper.getSprite(5,2,1,1);
+        lowerRightCornerRock = textureRegionCropper.getSprite(6,2,1,1);
+        lowerEdgeRock = textureRegionCropper.getSprite(7,2,1,1);
+        lowerLeftCornerRock = textureRegionCropper.getSprite(8,2,1,1);
+        loneRock = textureRegionCropper.getSprite(9,2,1,1);
+        redDirt = textureRegionCropper.getSprite(10,1,1,1);
+        redRock = textureRegionCropper.getSprite(0,1,1,1);
+        leftEdgeRedRock = textureRegionCropper.getSprite(1,1,1,1);
+        upperLeftCornerRedRock = textureRegionCropper.getSprite(2,1,1,1);
+        upperEdgeRedRock = textureRegionCropper.getSprite(3,1,1,1);
+        upperRightCornerRedRock = textureRegionCropper.getSprite(4,1,1,1);
+        rightEdgeRedRock = textureRegionCropper.getSprite(5,1,1,1);
+        lowerRightCornerRedRock = textureRegionCropper.getSprite(6,1,1,1);
+        lowerEdgeRedRock = textureRegionCropper.getSprite(7,1,1,1);
+        lowerLeftCornerRedRock = textureRegionCropper.getSprite(8,1,1,1);
+        loneRedRock = textureRegionCropper.getSprite(9,1,1,1);
 
-        water = handler.getTextureRegionCropper().getSprite(1,7,1,1);
-        leftEdgeWater = handler.getTextureRegionCropper().getSprite(2,7,1,1);
-        upperLeftCornerWater = handler.getTextureRegionCropper().getSprite(3,7,1,1);
-        upperEdgeWater = handler.getTextureRegionCropper().getSprite(4,7,1,1);
-        upperRightCornerWater = handler.getTextureRegionCropper().getSprite(5,7,1,1);
-        rightEdgeWater = handler.getTextureRegionCropper().getSprite(6,7,1,1);
-        lowerRightCornerWater = handler.getTextureRegionCropper().getSprite(7,7,1,1);
-        lowerEdgeWater = handler.getTextureRegionCropper().getSprite(8,7,1,1);
-        lowerLeftCornerWater = handler.getTextureRegionCropper().getSprite(9,7,1,1);
-        loneWater = handler.getTextureRegionCropper().getSprite(10,7,1,1);
-        lantern = handler.getTextureRegionCropper().getSprite(4,4,1,1);
-        smallHouseA = handler.getTextureRegionCropper().getSprite(0,5,3,2);
-        smallHouseB = handler.getTextureRegionCropper().getSprite(3,5,3,2);
-        smallHouseC = handler.getTextureRegionCropper().getSprite(6,5,3,2);
-        smallHouseD = handler.getTextureRegionCropper().getSprite(9,5,3,2);
-        doorHouseA = handler.getTextureRegionCropper().getSprite(2*6,5,4,2);
-        doorHouseB = handler.getTextureRegionCropper().getSprite(4*4,5,4,2);
-        doorHouseC = handler.getTextureRegionCropper().getSprite(4*5,5,4,2);
-        doorHouseD = handler.getTextureRegionCropper().getSprite(4*6,5,4,2);
-        palaceA = handler.getTextureRegionCropper().getSprite(2*6,1,6,4);
-        palaceB = handler.getTextureRegionCropper().getSprite(3*6,1,6,4);
-        smallTree = handler.getTextureRegionCropper().getSprite(3,4,1,1);
-        tallTree = handler.getTextureRegionCropper().getSprite(0,7,1,2);
+        ghoulDirt = textureRegionCropper.getSprite(10,3,1,1);
+        ghoulRock = textureRegionCropper.getSprite(0,3,1,1);
+        leftEdgeGhoulRock = textureRegionCropper.getSprite(1,3,1,1);
+        upperLeftCornerGhoulRock = textureRegionCropper.getSprite(2,3,1,1);
+        upperEdgeGhoulRock = textureRegionCropper.getSprite(3,3,1,1);
+        upperRightCornerGhoulRock = textureRegionCropper.getSprite(4,3,1,1);
+        rightEdgeGhoulRock = textureRegionCropper.getSprite(5,3,1,1);
+        lowerRightCornerGhoulRock = textureRegionCropper.getSprite(6,3,1,1);
+        lowerEdgeGhoulRock = textureRegionCropper.getSprite(7,3,1,1);
+        lowerLeftCornerGhoulRock = textureRegionCropper.getSprite(8,3,1,1);
+        loneGhoulRock = textureRegionCropper.getSprite(9,3,1,1);
+
+        water = textureRegionCropper.getSprite(1,7,1,1);
+        leftEdgeWater = textureRegionCropper.getSprite(2,7,1,1);
+        upperLeftCornerWater = textureRegionCropper.getSprite(3,7,1,1);
+        upperEdgeWater = textureRegionCropper.getSprite(4,7,1,1);
+        upperRightCornerWater = textureRegionCropper.getSprite(5,7,1,1);
+        rightEdgeWater = textureRegionCropper.getSprite(6,7,1,1);
+        lowerRightCornerWater = textureRegionCropper.getSprite(7,7,1,1);
+        lowerEdgeWater = textureRegionCropper.getSprite(8,7,1,1);
+        lowerLeftCornerWater = textureRegionCropper.getSprite(9,7,1,1);
+        loneWater = textureRegionCropper.getSprite(10,7,1,1);
+        lantern = textureRegionCropper.getSprite(4,4,1,1);
+        smallHouseA = textureRegionCropper.getSprite(0,5,3,2);
+        smallHouseB = textureRegionCropper.getSprite(3,5,3,2);
+        smallHouseC = textureRegionCropper.getSprite(6,5,3,2);
+        smallHouseD = textureRegionCropper.getSprite(9,5,3,2);
+        doorHouseA = textureRegionCropper.getSprite(2*6,5,4,2);
+        doorHouseB = textureRegionCropper.getSprite(4*4,5,4,2);
+        doorHouseC = textureRegionCropper.getSprite(4*5,5,4,2);
+        doorHouseD = textureRegionCropper.getSprite(4*6,5,4,2);
+        palaceA = textureRegionCropper.getSprite(2*6,1,6,4);
+        palaceB = textureRegionCropper.getSprite(3*6,1,6,4);
+        smallTree = textureRegionCropper.getSprite(3,4,1,1);
+        tallTree = textureRegionCropper.getSprite(0,7,1,2);
     }
 
     public TextureRegion getPlayerLeft() {

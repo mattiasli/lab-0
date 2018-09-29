@@ -27,7 +27,8 @@ public class Animation {
     }
 
     /**
-     *
+     * This method updates the currentSprite. That is, if the currentSprite has been played it's secondsPerSprite time or longer, the currentSprite will be set
+     * to the next index in the spriteArray, or if it was already in the last index, set it back to the first index.
      */
     public void update(){
         currentSpriteTime = currentSpriteTime + Gdx.graphics.getRawDeltaTime();
