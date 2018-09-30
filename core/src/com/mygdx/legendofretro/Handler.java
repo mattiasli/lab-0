@@ -1,7 +1,7 @@
 package com.mygdx.legendofretro;
 
 import com.mygdx.legendofretro.graphics.AnimatedSpriteManager;
-import com.mygdx.legendofretro.graphics.CameraManager;
+import com.mygdx.legendofretro.camera.CameraManager;
 import com.mygdx.legendofretro.graphics.StillSpriteManager;
 import com.mygdx.legendofretro.graphics.TextureLoader;
 import com.mygdx.legendofretro.graphics.TextureRegionCropper;

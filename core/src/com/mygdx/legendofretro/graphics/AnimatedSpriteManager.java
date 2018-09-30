@@ -27,15 +27,16 @@ public class AnimatedSpriteManager {
     }
 
     public void initialize(){
-        playerLeft = new Animation(handler.getTextureRegionCropper().getSpriteArray(0, 1, 0, 1, 1),0.2f);
-        playerUp = new Animation(handler.getTextureRegionCropper().getSpriteArray(2, 3, 0, 1, 1),0.2f);
-        playerRight = new Animation(handler.getTextureRegionCropper().getSpriteArray(4, 5, 0, 1, 1),0.2f);
-        playerDown = new Animation(handler.getTextureRegionCropper().getSpriteArray(6, 7, 0, 1, 1),0.2f);
-        iceFlower = new Animation(handler.getTextureRegionCropper().getSpriteArray(0, 2, 4, 1, 1),0.6f);
-        womanLeft = new Animation(handler.getTextureRegionCropper().getSpriteArray(0, 1, 9, 1, 1),0.6f);
-        womanUp = new Animation(handler.getTextureRegionCropper().getSpriteArray(2, 3, 9, 1, 1),0.6f);
-        womanRight = new Animation(handler.getTextureRegionCropper().getSpriteArray(4, 5, 9, 1, 1),0.6f);
-        womanDown = new Animation(handler.getTextureRegionCropper().getSpriteArray(6, 7, 9, 1, 1),0.6f);
+        TextureRegionCropper textureRegionCropper = handler.getTextureRegionCropper();
+        playerLeft = new Animation(textureRegionCropper.getSpriteArray(0, 1, 0, 1, 1),0.2f);
+        playerUp = new Animation(textureRegionCropper.getSpriteArray(2, 3, 0, 1, 1),0.2f);
+        playerRight = new Animation(textureRegionCropper.getSpriteArray(4, 5, 0, 1, 1),0.2f);
+        playerDown = new Animation(textureRegionCropper.getSpriteArray(6, 7, 0, 1, 1),0.2f);
+        iceFlower = new Animation(textureRegionCropper.getSpriteArray(0, 2, 4, 1, 1),0.6f);
+        womanLeft = new Animation(textureRegionCropper.getSpriteArray(0, 1, 9, 1, 1),0.6f);
+        womanUp = new Animation(textureRegionCropper.getSpriteArray(2, 3, 9, 1, 1),0.6f);
+        womanRight = new Animation(textureRegionCropper.getSpriteArray(4, 5, 9, 1, 1),0.6f);
+        womanDown = new Animation(textureRegionCropper.getSpriteArray(6, 7, 9, 1, 1),0.6f);
     }
 
     public void update(){

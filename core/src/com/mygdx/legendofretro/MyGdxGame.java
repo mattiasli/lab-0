@@ -14,8 +14,6 @@ public class MyGdxGame extends ApplicationAdapter {
 
 	private boolean initialized;
 
-
-	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
@@ -30,17 +28,17 @@ public class MyGdxGame extends ApplicationAdapter {
 
 	private void update(){
 	    handler.getAnimatedSpriteManager().update();
-	    handler.getCameraManager().getOrthographicCamera().update();
+	    handler.getCameraManager().update();
     }
 
 	@Override
 	public void render () {
         if(!initialized) initialize();
 	    update();
+
 		Gdx.gl.glClearColor(0, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		batch.setProjectionMatrix(handler.getCameraManager().getOrthographicCamera().combined);
-
+		handler.getCameraManager().setProjectionMatrix(batch);
 		batch.begin();
 
 		batch.draw(handler.getTextureLoader().getTexture(), 800, 400);
