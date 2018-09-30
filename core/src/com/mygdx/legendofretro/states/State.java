@@ -17,5 +17,7 @@ public abstract class State {
 
     abstract public void update();
 
-    abstract public void render(SpriteBatch spriteBatch);
+    abstract public void render(SpriteBatch sb);
+
+    abstract public void tap(float x, float y, int count, int button);
 }

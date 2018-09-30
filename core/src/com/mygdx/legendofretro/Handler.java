@@ -5,6 +5,8 @@ import com.mygdx.legendofretro.camera.CameraManager;
 import com.mygdx.legendofretro.graphics.StillSpriteManager;
 import com.mygdx.legendofretro.graphics.TextureLoader;
 import com.mygdx.legendofretro.graphics.TextureRegionCropper;
+import com.mygdx.legendofretro.input.InputManager;
+import com.mygdx.legendofretro.states.StateManager;
 
 public class Handler {
     private final CameraManager cameraManager;
@@ -12,7 +14,8 @@ public class Handler {
     private final TextureRegionCropper textureRegionCropper;
     private final StillSpriteManager stillSpriteManager;
     private final AnimatedSpriteManager animatedSpriteManager;
-    private final InputManager inputManager;
+    private final com.mygdx.legendofretro.input.InputManager inputManager;
+    private final StateManager stateManager;
 
     public Handler() {
         cameraManager = new CameraManager();
@@ -20,13 +23,15 @@ public class Handler {
         textureRegionCropper = new TextureRegionCropper(this);
         stillSpriteManager = new StillSpriteManager(this);
         animatedSpriteManager = new AnimatedSpriteManager(this);
-        inputManager = new InputManager(this);
+        inputManager = new com.mygdx.legendofretro.input.InputManager(this);
+        stateManager = new StateManager(this);
     }
 
     public void initialize(){
         stillSpriteManager.initialize();
         animatedSpriteManager.initialize();
         inputManager.initialize();
+        stateManager.initialize();
     }
 
     public CameraManager getCameraManager() {
@@ -51,5 +56,9 @@ public class Handler {
 
     public InputManager getInputManager() {
         return inputManager;
+    }
+
+    public StateManager getStateManager() {
+        return stateManager;
     }
 }

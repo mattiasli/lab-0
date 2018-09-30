@@ -1,8 +1,9 @@
-package com.mygdx.legendofretro;
+package com.mygdx.legendofretro.input;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.input.GestureDetector;
 import com.badlogic.gdx.math.Vector2;
+import com.mygdx.legendofretro.Handler;
 
 public class InputManager implements GestureDetector.GestureListener {
 
@@ -23,6 +24,7 @@ public class InputManager implements GestureDetector.GestureListener {
 
     @Override
     public boolean tap(float x, float y, int count, int button) {
+        handler.getStateManager().tap(x, y, count, button);
         return false;
     }
 
